@@ -1,7 +1,7 @@
 @import "../vars/vars.scss";
 
 .navigation{
-    background-color: var(--alpha);
+    background-color: var(--colorFond);
 }
 
 nav{
@@ -65,8 +65,27 @@ nav{
     .nav-items{
         position: relative;
         @include flex(column, flex-start, flex-start);
-        height: inherit;
+        height: auto;
         padding-top: 25px;
+    }
+
+    .nav-items-socials{
+        @include flex(row, flex-start, flex-start);
+
+        .item{
+            padding: 5px 12px;
+            opacity: 0.7;
+            transition: all 0.2s ease-in-out;
+            padding-bottom: 12px;
+
+            a{
+                color: var(--color3);
+            }
+
+            &:hover, &.active{
+                opacity: 1;
+            }
+        }
     }
 
     .nav-item{
@@ -103,7 +122,7 @@ nav{
 //                     |__|                    |__|
 @media (min-width:768px) {
     nav{
-        @include flex(row, center, space-between);
+        @include flex(row, center, flex-start);
         padding: 18px 18px 0 18px;
 
         .nav-header{
@@ -119,17 +138,30 @@ nav{
             opacity: 1;
             padding-top: 0;
             height: auto;
-            @include flex(row, center, flex-end);
+            @include flex(row, center, space-between);
             z-index: 1;
+            margin-left: 24px;
         }
         .nav-items{
             @include flex(row, center, flex-end);
             padding-top: 0;
         }
+        .nav-items-socials{
+            padding-top: 0;
+    
+            .item{
+                padding-bottom: 26px;
+            }
+        }
 
         .nav-item{
+            opacity: 0.5;
             padding-bottom: 26px;
             width: auto;
+        }
+
+        .nav-items-active{
+            display: none;
         }
     }
 }
@@ -142,7 +174,11 @@ nav{
 //                     |__|                       |__|
 @media (min-width: 1024px) {
     nav{
-        padding: 26px 18px 0 18px;
+        padding: 48px 18px 0 18px;
+
+        .nav-item{
+            margin-right: 48px;
+        }
     }
 }
 

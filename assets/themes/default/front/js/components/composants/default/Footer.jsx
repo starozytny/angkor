@@ -8,10 +8,10 @@ export class Footer extends Component {
                 <div className="footer">
                     <div className="footer-menu">
                         <div className="footer-logo">
-                            <a href={Routing.generate('app_homepage')} title="Logilink">
+                            <a href={Routing.generate('app_homepage')} title="Angkor restaurant">
                                 <img src="../../build/themes/default/front/images/logo.svg" alt="Logo"/>
                             </a>
-                            <span>Site internet</span>
+                            <span>Angkor Restaurant Aix-en-provence</span>
                         </div>
                         <div className="footer-items">
                             <a rel="nofollow" href={Routing.generate('app_mentions')}>Mentions légales</a>
@@ -20,7 +20,7 @@ export class Footer extends Component {
                             <a rel="nofollow" href={Routing.generate('app_login')}>Espace client</a>
                         </div>
                     </div>
-                    <div className="copyright">Copyright © 2020 - <a href={Routing.generate('app_homepage')}>Logilink</a></div>
+                    <div className="copyright">Copyright © 2020 - <a href="https://chanbora-chhun.fr" target="_blank">Chanbora Chhun</a></div>
                 </div>
             </footer>
         </>
