@@ -172,6 +172,10 @@ nav{
 //                     | |  |_|\___/_____|  |_|    | |
 //                     |__|                       |__|
 @media (min-width: 1024px) {
+    .navigation{
+        background-color: transparent;
+    }
+
     nav{
         padding: 48px 16px 0 16px;
 

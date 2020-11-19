@@ -1,60 +1,38 @@
 @import "../vars/vars.scss";
 
-.page-title{
-    padding: 0 12px;
+@import "./split/homepage/header.scss";
 
-    .subtitle{
-        color: var(--color0);
-        font-size: 18px;
-        @include fontSemibold();
-    }
+h2{
+    margin-bottom: 24px;
 
-    h1{
-        font-size: 3em;
-    }
-
-    .cta{
-        margin-top: 24px;
+    &:after{
+        content: '';
+        display: block;
+        width: 25%;
+        height: 3px;
+        background-color: var(--color0);
+        margin-top: 18px;
     }
 }
 
-//                      __   _____ __    ___    __
-//                     | _| |___  / /_  ( _ )  |_ |
-//    _____ _____ _____| |     / / '_ \ / _ \   | |_____ _____ _____
-//   |_____|_____|_____| |    / /| (_) | (_) |  | |_____|_____|_____|
-//                     | |   /_/  \___/ \___/   | |
-//                     |__|                    |__|
-@media (min-width:768px) {
-    .page-title{
-        padding: 0 16px;
-        max-width: 414px;
+.part-1{
+    min-height: 100vh;
+    background: linear-gradient(rgba(173,219,0,0.1), var(--alpha));
 
-        h1{
-            font-size: 3.5em;
+    .container{
+        @include maxscreen();
+        padding: 48px 12px;   
+
+        .illustration{
+            margin-bottom: 24px;
+            img{
+                @include boxshadow();
+                border-radius: 10px;
+            }
         }
-    }
-}
 
-//                      __   _ ____  ___   ___    __
-//                     | _| / |___ \( _ ) / _ \  |_ |
-//    _____ _____ _____| |  | | __) / _ \| | | |  | |_____ _____ _____
-//   |_____|_____|_____| |  | |/ __/ (_) | |_| |  | |_____|_____|_____|
-//                     | |  |_|_____\___/ \___/   | |
-//                     |__|                      |__|
-@media (min-width:1280px) {
-    .page-title{
-        padding: 0 30px;
-    }
-}
-
-//                      __   _ _  _   _  _    ___    __
-//                     | _| / | || | | || |  / _ \  |_ |
-//    _____ _____ _____| |  | | || |_| || |_| | | |  | |_____ _____ _____
-//   |_____|_____|_____| |  | |__   _|__   _| |_| |  | |_____|_____|_____|
-//                     | |  |_|  |_|    |_|  \___/   | |
-//                     |__|                         |__|
-@media (min-width: 1440px){
-    .page-title{
-        padding: 0;
+        .content{
+            
+        }
     }
 }

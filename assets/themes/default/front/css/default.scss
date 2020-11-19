@@ -65,7 +65,7 @@ body {
     line-height: 1.37;
 }
 
-h1{
+h1, h2{
     @include fontBold();
 }
 
@@ -79,6 +79,9 @@ a{
 }
 
 main{
-    @include maxscreen();
     padding: 50px 0;
+}
+
+img{
+    width: 100%;
 }

@@ -12,21 +12,43 @@
 
 {% block main_content %}
     <header>
-    
         <div class="page-title">
-            <p class="subtitle">La cuisine cambodgienne à Aix-en-provence</p>
-            <h1>Angkor Restaurant</h1>
-            <p>
-                Cuisine familiale et inspirée des pays d'Asie, Angkor Restaurant 
-                vous propose de dégustez à emporter et en livraison nos plats 
-                fait maison en toute simplicité.
-            </p>
-            <div class="cta">
-                <a href="" class="btn btn-color0">Découvrir notre menu</a>
+            <div class="container">
+                <p class="subtitle">La cuisine cambodgienne à Aix-en-provence</p>
+                <h1>Angkor Restaurant</h1>
+                <p>
+                    Cuisine familiale et inspirée des pays d'Asie, Angkor Restaurant 
+                    vous propose de dégustez à emporter et en livraison nos plats 
+                    fait maison en toute simplicité.
+                </p>
+                <div class="cta">
+                    <a href="" class="btn btn-color0">Découvrir notre menu</a>
+                </div>
             </div>
         </div>
-
     </header>
+
+    <section class="part-1">
+        <div class="container">
+            <div class="illustration">
+                <img src="{{ asset(path_images ~ "services.jpg") }}" alt="Angkor restaurant propose son menu">
+            </div>
+
+            <div class="content">
+                <h2>Une cuisine délicieuse à portée de main</h2>
+                <p>
+                    Angkor Restaurant vous propose un service de vente à emporter avec 
+                    une sélection spéciale de plats les plus appréciés que vous pourrez 
+                    désormais déguster seul, accompagnés ou à partager en famille soit 
+                    au bureau, soit à votre domicile.
+                    <br><br>
+                    Pour compléter cette offre, et pour le plus grand plaisir de tous, 
+                    Angkor vous propose de découvrir sa nouvelle carte de Sushis.
+                </p>
+            </div>
+        </div>
+    </section>
+
 {% endblock %}
 
 {% block javascripts %}
