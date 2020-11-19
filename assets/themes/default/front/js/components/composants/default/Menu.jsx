@@ -80,7 +80,7 @@ export class Menu extends Component {
                         </div>
                         <div className="item btn-icon">
                             <a href="" target="_blank">
-                                <span className="icon-instagram"></span><span className="tooltip">Facebook</span>
+                                <span className="icon-instagram"></span><span className="tooltip">Instagram</span>
                             </a>
                         </div>
                     </div>
