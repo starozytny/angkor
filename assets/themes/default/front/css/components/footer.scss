@@ -3,7 +3,7 @@
 .footer{
     padding: 62px 0 42px 0;
     margin: 62px 12px 0 12px;
-    border-top: 1px solid var(--color6);
+    border-top: 1px solid var(--colorBorder);
 
     .footer-logo{
         @include flex(column, flex-start, flex-start);

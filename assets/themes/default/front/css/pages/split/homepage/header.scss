@@ -36,9 +36,26 @@
 @media (min-width:768px) {
     .page-title{
         padding: 0 16px;
+
+        .container{
+            max-width: 500px;
+        }
         
+        .subtitle{
+            font-size: 20px;
+        }
+    
         h1{
-            font-size: 3.5em;
+            font-size: 5em;
+            margin-bottom: 8px;
+
+            & + p{
+                font-size: 18px;
+            }
+        }
+    
+        .cta{
+            margin-top: 48px;
         }
     }
 }
@@ -55,19 +72,6 @@
         .container{
             margin: 0;
             text-align: left;
-        }
-
-        .subtitle{
-            font-size: 20px;
-        }
-    
-        h1{
-            font-size: 5em;
-            margin-bottom: 8px;
-        }
-    
-        .cta{
-            margin-top: 48px;
         }
     }
 }
@@ -92,10 +96,6 @@
     
         h1{
             font-size: 6.5em;
-
-            & + p{
-                font-size: 18px;
-            }
         }
     
         .cta{
@@ -113,5 +113,17 @@
 @media (min-width: 1440px){
     .page-title{
         padding: 0;
+    }
+}
+
+//                      __   _  ___ ____   ___    __
+//                     | _| / |/ _ \___ \ / _ \  |_ |
+//    _____ _____ _____| |  | | (_) |__) | | | |  | |_____ _____ _____
+//   |_____|_____|_____| |  | |\__, / __/| |_| |  | |_____|_____|_____|
+//                     | |  |_|  /_/_____|\___/   | |
+//                     |__|                      |__|
+@media (min-width: 1920px){
+    .page-title{
+        padding: 60px 0 0 0;
     }
 }
