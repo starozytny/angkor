@@ -38,6 +38,21 @@ h2{
             max-width: 414px;
             margin-bottom: 24px;
         }
+
+        .socials{
+            margin-top: 24px;
+            @include flex(row, flex-start, flex-start);
+
+            & > *{
+                margin-right: 36px;
+                margin-bottom: 24px;
+                color: var(--color0);
+                
+                [class^="icon-"]{
+                    font-size: 24px;
+                }
+            }
+        }
     }
 }
 
@@ -329,6 +344,12 @@ h2{
     .part-3{
         .container{
             margin-top: 148px;
+
+            .content-1, .content-2{
+                p{
+                    font-size: 20px;
+                }
+            }
         }
     }
 }
