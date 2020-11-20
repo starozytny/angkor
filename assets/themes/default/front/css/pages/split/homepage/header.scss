@@ -8,7 +8,6 @@
     width: 60%;
     height: 150%;
     overflow: hidden;
-    z-index: -1;
 
     svg{
         transform: translateX(60px);
@@ -24,6 +23,7 @@
         max-width: 414px;
         text-align: center;
         margin: 0 auto;
+        @include flex(column, center, center);
     }
 
     .subtitle{
@@ -39,6 +39,69 @@
 
     .cta{
         margin-top: 24px;
+        max-width: 300px;
+    }
+
+    @keyframes scaleImg {
+        0%{transform: scale(1);}
+        100%{transform: scale(1.05);}
+    }
+
+    @keyframes scaleImg2 {
+        0%{transform: scale(1);}
+        100%{transform: scale(0.5);}
+    }
+
+    .illustration{
+        position: relative;
+        margin-top: 24px;
+        @include flex(column, center, center);
+
+        .nouilles, .sushi, .banhoy{
+            border-radius: 800px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px transparentize($color: #15120D, $amount: 0.8);
+
+            img{
+                animation: 6s ease-in-out 1s infinite alternate scaleImg;    
+            }
+        }
+
+        .nouilles{
+            width: 230px;
+            height: 230px;
+        }
+
+        .sushi{
+            width: 100px;
+            height: 100px;
+            margin-left: 156px;
+        }
+
+        .banhoy{
+            display: none;
+            width: 120px;
+            height: 120px;
+
+            img{
+                object-fit: cover;
+                height: 100%;
+            }
+        }
+
+        &:before{
+            content: '';
+            background-color: var(--color0);
+            display: block;
+            position: absolute;
+            bottom: 35px;
+            right: 148px;
+            width: 90px;
+            height: 90px;
+            border-radius: 150px;
+            box-shadow: 0 5px 20px transparentize($color: #15120D, $amount: 0.8);
+            animation: 3s ease-in-out 1s infinite alternate scaleImg2;
+        }
     }
 }
 
@@ -49,6 +112,7 @@
 //                     | |   /_/  \___/ \___/   | |
 //                     |__|                    |__|
 @media (min-width:768px) {
+    
     @keyframes moveSvg{
         0%{
             d: path("M307.5,7.18C184.44,36.43-39.86,25.29,6.12,241.22S312.61,415.37,362.76,538,474.21,1052,798.82,795.7,1031.47,47.58,1031.47,47.58,430.56-22.08,307.5,7.18Z")
@@ -58,6 +122,8 @@
         }
     }
     .home-bg{
+        z-index: -1;
+
         svg{
             path{
                 animation: 6s ease-in-out 1s infinite alternate moveSvg;    
@@ -87,6 +153,24 @@
         .cta{
             margin-top: 48px;
         }
+
+        .illustration{  
+            margin-top: 60px;
+
+            .nouilles{
+                width: 330px;
+                height: 330px;
+            }
+    
+            .sushi{
+                width: 150px;
+                height: 150px;
+            }
+
+            &:before{
+                bottom: 124px;
+            }
+        }
     }
 }
 
@@ -99,9 +183,35 @@
 //                     |__|                       |__|
 @media (min-width: 1024px) {
     .page-title{
+        @include flex(row, flex-start, flex-start);
+
         .container{
             margin: 0;
             text-align: left;
+            align-items: flex-start;
+        }
+
+        .illustration{   
+            margin-top: 0;
+            margin-left: 48px; 
+
+            .nouilles{
+                width: 330px;
+                height: 330px;
+            }
+    
+            .sushi{
+                width: 150px;
+                height: 150px;
+                position: absolute;
+                bottom: -166px;
+                right: 0;
+            }
+
+            &:before{
+                bottom: -106px;
+                right: 174px;
+            }
         }
     }
 }
@@ -131,6 +241,18 @@
         .cta{
             margin-top: 48px;
         }
+
+        .illustration{
+            margin-left: 180px;
+            transform: translateY(86px);
+
+            .banhoy{
+                display: block;
+                position: absolute;
+                top: -83px;
+                right: -85px;
+            }
+        }
     }
 }
 
@@ -143,6 +265,20 @@
 @media (min-width: 1440px){
     .page-title{
         padding: 0;
+
+        .illustration{
+            margin-left: 220px;
+            transform: translateY(12px);
+
+            .nouilles{
+                width: 480px;
+                height: 480px;
+            }
+
+            .banhoy{
+                top: -53px;
+            }
+        }
     }
 }
 
