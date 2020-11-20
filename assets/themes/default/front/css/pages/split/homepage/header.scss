@@ -24,6 +24,7 @@
         text-align: center;
         margin: 0 auto;
         @include flex(column, center, center);
+        overflow: initial;
     }
 
     .subtitle{
@@ -89,7 +90,6 @@
             height: 120px;
 
             img{
-                object-fit: cover;
                 height: 100%;
             }
         }
@@ -299,7 +299,7 @@
 
         .illustration{
             &:before{
-                right: 161px;
+                right: 248px;
             }
         }
     }

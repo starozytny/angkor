@@ -39,6 +39,21 @@
             margin-bottom: 5px;
         }
     }
+
+    .footer-horaires{
+        text-align: center;
+        margin-bottom: 36px;
+        opacity: 0.7;
+
+        .title{
+            margin-bottom: 8px;
+        }
+
+        .item{
+            margin-bottom: 12px;
+        }
+    }
+
     .copyright{
         color: var(--black);
         opacity: 0.7;
@@ -57,6 +72,20 @@
 //                     |__|                    |__|
 @media (min-width:768px) {
     .footer{
+        @include flex(row, flex-start, flex-start);
+        flex-wrap: wrap;
+
+        .footer-menu{
+            width: 50%;
+        }
+        .footer-horaires{
+            width: 50%;
+        }
+
+        .copyright{
+            width: 100%;
+        }
+
         .footer-items{
             flex-direction: row;
             flex-wrap: wrap;

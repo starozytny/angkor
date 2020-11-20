@@ -3,6 +3,10 @@
 @import "~aos/dist/aos.css";
 @import "./split/homepage/header.scss";
 
+.container{
+    overflow: hidden;
+}
+
 h2{
     margin-bottom: 24px;
 

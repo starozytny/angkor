@@ -11,13 +11,34 @@ export class Footer extends Component {
                             <a href={Routing.generate('app_homepage')} title="Angkor restaurant">
                                 <img src="../../build/themes/default/front/images/logo.svg" alt="Logo"/>
                             </a>
-                            <span>Angkor Restaurant Aix-en-provence</span>
+                            <span>Angkor Restaurant Aix-en-provence -  10 Place forum des Cardeurs, 13001 Aix-en-Provence </span>
                         </div>
                         <div className="footer-items">
                             <a rel="nofollow" href={Routing.generate('app_mentions')}>Mentions légales</a>
                             <a rel="nofollow" href={Routing.generate('app_politique')}>Politique de confidentialité</a>
                             <a rel="nofollow" href={Routing.generate('app_cookies')}>Gestion des cookies</a>
                             <a rel="nofollow" href={Routing.generate('app_login')}>Espace client</a>
+                        </div>
+                    </div>
+                    <div className="footer-horaires">
+                        <p className="title">Horaire</p>
+                        <div className="items">
+                            <div className="item">
+                                <div className="day">Mardi - Samedi</div>
+                                <div className="hours">11h30 à 14h30</div>
+                            </div>
+                            <div className="item">
+                                <div className="day">Mardi - Samedi</div>
+                                <div className="hours">18h30 à 21h00</div>
+                            </div>
+                            <div className="item">
+                                <div className="day">Dimanche</div>
+                                <div className="hours">18h30 à 21h30</div>
+                            </div>
+                            <div className="item">
+                                <div className="day">Lundi</div>
+                                <div className="hours">Fermé</div>
+                            </div>
                         </div>
                     </div>
                     <div className="copyright">Copyright © 2020 - <a href="https://chanbora-chhun.fr" target="_blank">Chanbora Chhun</a></div>
