@@ -1,6 +1,12 @@
 import '../../css/pages/homepage.scss';
-import React        from 'react';
-import ReactDOM     from 'react-dom';
+
+// import React        from 'react';
+// import ReactDOM     from 'react-dom';
+
+import AOS          from 'aos/dist/aos';
+
+AOS.init();
+
 // import Compteur     from '../components/composants/Compteur';
 
 // experience();
