@@ -78,6 +78,34 @@ h2{
     }
 }
 
+.part-3{
+    .container{
+        @include maxscreen();
+        padding: 48px 12px;
+    }
+
+    .illustration{
+        @include boxshadow();
+        margin-bottom: 24px;
+        overflow: hidden;
+
+        img{
+            transition: all 0.8s ease;
+        }
+
+        &:hover{
+            img{
+                transform: scale(1.03);
+            }
+        }
+    }
+
+    .content-1{
+        @include flex(column-reverse, flex-start, flex-start);
+        margin-bottom: 48px;
+    }
+}
+
 //                      __   _____ __    ___    __
 //                     | _| |___  / /_  ( _ )  |_ |
 //    _____ _____ _____| |     / / '_ \ / _ \   | |_____ _____ _____
@@ -99,7 +127,7 @@ h2{
     .part-2{
         .illustration{
             display: block;
-            transform: translateY(-86px);
+            margin-top: -156px;
             z-index: -1;
             position: relative;
 
@@ -107,6 +135,31 @@ h2{
                 background: url('../../images/quote-image.png') no-repeat;
                 background-size: cover;
                 height: 300px;
+            }
+        }
+    }
+
+    .part-3{
+        .container{
+            @include flex(row, flex-start, space-around);
+            margin-top: 48px;
+        }
+        .content-1{
+            flex-direction: column;
+            width: 360px;
+            margin-right: 24px;
+
+            .illustration{
+                margin-bottom: 0;
+                margin-top: 48px;
+            }
+        }
+        .content-2{
+            width: 360px;
+            margin-left: 24px;
+
+            .illustration{
+                margin-bottom: 48px;
             }
         }
     }
@@ -152,7 +205,7 @@ h2{
             }
         }
         .illustration{
-            transform: translateY(-200px);
+            margin-top: -200px;
 
             .image{
                 height: 500px;
@@ -165,6 +218,19 @@ h2{
                     top: 4px; left: 0;
                     width: 100%; height: 100%;
                 }
+            }
+        }
+    }
+
+    .part-3{
+        .container{
+            margin-top: 86px;
+        }
+        .content-1, .content-2{
+            width: 414px;
+
+            p{
+                font-size: 18px;
             }
         }
     }
@@ -196,6 +262,12 @@ h2{
             }
         }
     }
+
+    .part-3{
+        .container{
+            margin-top: 128px;
+        }
+    }
 }
 
 //                      __   _  __    ___   ___    __
@@ -207,7 +279,7 @@ h2{
 @media (min-width: 1600px){
     .part-2{
         .illustration{
-            transform: translateY(-250px);
+            margin-top: -250;
 
             .image{
                 height: 600px;
@@ -217,6 +289,12 @@ h2{
                     background-image: linear-gradient(transparent, transparent, transparent, transparent, var(--alpha));
                 }
             }
+        }
+    }
+
+    .part-3{
+        .content-1, .content-2{
+            width: 520px
         }
     }
 }
@@ -236,11 +314,16 @@ h2{
             }
         }
         .illustration{
-            transform: translateY(-300px);
+            margin-top: -300px;
 
             .image{
                 height: 700px;
             }
+        }
+    }
+    .part-3{
+        .container{
+            margin-top: 148px;
         }
     }
 }
