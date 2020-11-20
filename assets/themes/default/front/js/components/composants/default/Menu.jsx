@@ -63,7 +63,7 @@ export class Menu extends Component {
                         <img src="../../build/themes/default/front/images/logo.svg" alt="logo"/>
                     </a>
                     <div className="nav-header-actions">
-                        <span className={"icon-facebook " + (menuOpened == "" ? "active" : null)} onClick={onOpenMenu}></span>
+                        <span className={"icon-menu " + (menuOpened == "" ? "active" : null)} onClick={onOpenMenu}></span>
                         <span className={"icon-cancel " + (menuOpened == "" ? null : "active")} onClick={onCloseMenu}></span>
                     </div>
                 </div>
@@ -73,6 +73,11 @@ export class Menu extends Component {
                         <div className="nav-items-active"></div>
                     </div>
                     <div className="nav-items-socials">
+                    <div className="item btn-icon">
+                            <a href="" target="_blank">
+                                <span className="icon-tripadvisor"></span><span className="tooltip">Tripadvisor</span>
+                                </a>
+                        </div>
                         <div className="item btn-icon">
                             <a href="" target="_blank">
                                 <span className="icon-facebook"></span><span className="tooltip">Facebook</span>
