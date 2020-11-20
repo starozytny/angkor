@@ -121,6 +121,10 @@ nav{
 //                     | |   /_/  \___/ \___/   | |
 //                     |__|                    |__|
 @media (min-width:768px) {
+    .navigation{
+        background: transparent;
+    }
+
     nav{
         @include flex(row, center, flex-start);
         padding: 18px 16px 0 16px;

@@ -1,5 +1,20 @@
 @import "../../../vars/vars.scss";
 
+.home-bg{
+    position: absolute;
+    top: -80px;
+    right: 0;
+    display: block;
+    width: 60%;
+    height: 150%;
+    overflow: hidden;
+    z-index: -1;
+
+    svg{
+        transform: translateX(60px);
+    }
+}
+
 .page-title{
     padding: 0 12px;
     @include maxscreen();
@@ -34,6 +49,21 @@
 //                     | |   /_/  \___/ \___/   | |
 //                     |__|                    |__|
 @media (min-width:768px) {
+    @keyframes moveSvg{
+        0%{
+            d: path("M307.5,7.18C184.44,36.43-39.86,25.29,6.12,241.22S312.61,415.37,362.76,538,474.21,1052,798.82,795.7,1031.47,47.58,1031.47,47.58,430.56-22.08,307.5,7.18Z")
+        }
+        100%{
+            d: path("M307.5,7.18C184.44,36.43-32-29.68,14,186.25S233.44,509.77,283.6,632.37s271.16,376.34,595.76,120S1031.47,47.58,1031.47,47.58,430.56-22.08,307.5,7.18Z")
+        }
+    }
+    .home-bg{
+        svg{
+            path{
+                animation: 6s ease-in-out 1s infinite alternate moveSvg;    
+            }
+        }
+    }
     .page-title{
         padding: 0 16px;
 
