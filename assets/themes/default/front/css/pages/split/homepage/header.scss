@@ -297,6 +297,11 @@
     .page-title{
         padding: 60px 0 0 0;
 
+        h1{
+            font-size: 8.5em;
+            line-height: 1.2;
+        }
+
         .illustration{
             &:before{
                 right: 248px;
